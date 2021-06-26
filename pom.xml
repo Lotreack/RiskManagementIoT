@@ -17,7 +17,7 @@
             <configuration>
                 <archive>
                     <manifest>
-                        <mainClass>TestLotreack.BodyCode</mainClass>
+                        <mainClass>MainClass.BodyCode</mainClass>
                     </manifest>
                 </archive>
             </configuration>

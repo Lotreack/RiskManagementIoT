@@ -1,0 +1,9 @@
+#Rus
+/*ущерб определяется из важности где важность градируется от 1 до 5-10 и ущерб ей соответсвественно*/
+/*добавить защищённость сюда, описать в классах девайсов как отношение количества закрытых уязвимостей к количеству существующих всего*/
+/*Risk = Pk* u, Где pk = po * умноженный на остальные параметры и подтягиваем эти параметры отттуда*/
+
+#Eng
+/ * damage is determined from the importance where importance is graded from 1 to 5-10 and damage to it, respectively */
+/ * add security here, describe in device classes as the ratio of the number of closed vulnerabilities to the number of existing total */
+/ * Risk = Pk * u, Where pk = po * multiplied by other parameters and pull these parameters out */

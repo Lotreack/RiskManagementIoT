@@ -8,7 +8,7 @@ public class Cisco_Catalyst_IE3x00_Rugged_Switches {
 
     String type = "Router";
     String name = "Cisco_Catalyst_IE3x00_Rugged_Switches";
-    public double[] Google_Nest_Hub_2nd_gen_vulnerabilities = new double[1];
+    public double[] Cisco_Catalyst_IE3x00_Rugged_Switches_vulnerabilities = new double[1];
     public double importance;
     public double availability;
     public int damage;
@@ -46,7 +46,7 @@ public class Cisco_Catalyst_IE3x00_Rugged_Switches {
         for (int i = 0; i < 1; i++)
         {
             System.out.println("Введите рейтинг" + " " + i + " " + "уязвимости ");
-            Google_Nest_Hub_2nd_gen_vulnerabilities[i] = Double.parseDouble(reader.readLine());
+            Cisco_Catalyst_IE3x00_Rugged_Switches_vulnerabilities[i] = Double.parseDouble(reader.readLine());
 
         }
 

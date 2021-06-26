@@ -12,9 +12,7 @@ public class Ring_Peephole_Cam {
     public double importance;
     public double availability;
     public int damage;
-    /*
-    ущерб определяется из важности где важность градируется от 1 до 5-10 и ущерб ей соответсвественно
-    * */
+
 
     final URL url = new URL("https://nvd.nist.gov/vuln/search/results?form_type=Advanced&results_type=overview&query=telephone+camera&search_type=all");
     final HttpURLConnection con = (HttpURLConnection) url.openConnection(); // для каждого случая своё
