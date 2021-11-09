@@ -11,6 +11,7 @@ public class Xiaomi_AIoT_Router_AC2350 {
     public double importance;
     public double availability;
     public int damage;
+    double k = 0.218;
     /*
     ущерб определяется из важности где важность градируется от 1 до 5-10 и ущерб ей соответсвественно
     * */
@@ -50,7 +51,7 @@ public class Xiaomi_AIoT_Router_AC2350 {
         for (int i = 0; i < 19; i++)
         {
             System.out.println("Введите рейтинг" + " " + i + " " + "уязвимости ");
-            Xiaomi_AIoT_Router_AC2350_vulnerabilities[i] = Double.parseDouble(reader.readLine());
+            Xiaomi_AIoT_Router_AC2350_vulnerabilities[i] = Double.parseDouble(reader.readLine()) * availability * importance * k;
 
         }
 

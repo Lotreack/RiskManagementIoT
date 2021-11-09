@@ -12,6 +12,7 @@ public class Xiaomi_AIoT_Router_AX9000 {
     public double importance;
     public double availability;
     public int damage;
+    double k = 0.218;
     /*
     ущерб определяется из важности где важность градируется от 1 до 5-10 и ущерб ей соответсвественно
     * */

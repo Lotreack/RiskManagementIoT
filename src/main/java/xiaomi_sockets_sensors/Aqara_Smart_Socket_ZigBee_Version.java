@@ -12,6 +12,7 @@ public class Aqara_Smart_Socket_ZigBee_Version {
     public double importance;
     public double availability;
     public int damage;
+    double k = 0.19873;
     /*
     ущерб определяется из важности где важность градируется от 1 до 5-10 и ущерб ей соответсвественно
     * */
@@ -51,7 +52,7 @@ public class Aqara_Smart_Socket_ZigBee_Version {
         for (int i = 0; i < 12; i++)
         {
             System.out.println("Введите рейтинг" + " " + i + " " + "уязвимости ");
-            Aqara_Smart_Socket_ZigBee_Version_vulnerabilities[i] = Double.parseDouble(reader.readLine());
+            Aqara_Smart_Socket_ZigBee_Version_vulnerabilities[i] = Double.parseDouble(reader.readLine()) * availability * importance * k;
 
         }
 

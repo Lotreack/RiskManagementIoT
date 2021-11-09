@@ -11,7 +11,8 @@ public class Ring_Peephole_Cam {
     public double[] Ring_Peephole_Cam_vulnerabilities = new double[1];
     public double importance;
     public double availability;
-    public int damage;
+    public double damage;
+    double k = 2100.01;
 
 
     final URL url = new URL("https://nvd.nist.gov/vuln/search/results?form_type=Advanced&results_type=overview&query=telephone+camera&search_type=all");
@@ -37,14 +38,14 @@ public class Ring_Peephole_Cam {
         importance = Double.parseDouble(reader.readLine());
 
         System.out.println("Введите ущерб от взлома устройства");
-        damage = Integer.parseInt(reader.readLine());
+        damage = Integer.parseInt(reader.readLine()) * k;
 
 
 
         for (int i = 0; i < 1; i++)
         {
             System.out.println("Введите рейтинг" + " " + i + " " + "уязвимости ");
-            Ring_Peephole_Cam_vulnerabilities[i] = Double.parseDouble(reader.readLine());
+            Ring_Peephole_Cam_vulnerabilities[i] = Double.parseDouble(reader.readLine()) * availability * importance;
 
         }
 

@@ -12,6 +12,7 @@ public class Aqara_Human_Body_Sensor {
     public double importance;
     public double availability;
     public int damage;
+    double k = 0.21623;
     /*
     ущерб определяется из важности где важность градируется от 1 до 5-10 и ущерб ей соответсвественно
     * */
@@ -51,7 +52,7 @@ public class Aqara_Human_Body_Sensor {
         for (int i = 0; i < 127; i++)
         {
             System.out.println("Введите рейтинг" + " " + i + " " + "уязвимости ");
-            Aqara_Human_Body_Sensor_vulnerabilities[i] = Double.parseDouble(reader.readLine());
+            Aqara_Human_Body_Sensor_vulnerabilities[i] = Double.parseDouble(reader.readLine()) * availability * importance * k;
 
         }
 

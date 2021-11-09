@@ -11,6 +11,7 @@ public class Aqara_Temperature_Humidity_Sensor {
     public double importance;
     public double availability;
     public int damage;
+    double k = 0.2013;
     /*
     ущерб определяется из важности где важность градируется от 1 до 5-10 и ущерб ей соответсвественно
     * */
@@ -49,7 +50,7 @@ public class Aqara_Temperature_Humidity_Sensor {
         for (int i = 0; i < 127; i++)
         {
             System.out.println("Введите рейтинг" + " " + i + " " + "уязвимости ");
-            Aqara_Temperature_Humidity_Sensor_vulnerabilities[i] = Double.parseDouble(reader.readLine());
+            Aqara_Temperature_Humidity_Sensor_vulnerabilities[i] = Double.parseDouble(reader.readLine()) * availability * importance * k;
 
         }
 

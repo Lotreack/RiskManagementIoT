@@ -12,6 +12,7 @@ public class Qingping_Bluetooth_Gateway {
     public double importance;
     public double availability;
     public int damage;
+    double k = 0.1745;
     /*
     ущерб определяется из важности где важность градируется от 1 до 5-10 и ущерб ей соответсвественно
     * */
@@ -50,7 +51,7 @@ public class Qingping_Bluetooth_Gateway {
         for (int i = 0; i < 2; i++)
         {
             System.out.println("Введите рейтинг" + " " + i + " " + "уязвимости ");
-            Qingping_Bluetooth_Gateway_vulnerabilities[i] = Double.parseDouble(reader.readLine());
+            Qingping_Bluetooth_Gateway_vulnerabilities[i] = Double.parseDouble(reader.readLine()) * availability * importance * k;
 
         }
 

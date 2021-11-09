@@ -12,6 +12,7 @@ public class Xiaofei_PTH_3M_Air_Detector {
     public double importance;
     public double availability;
     public int damage;
+    double k = 0.3128;
     /*
     ущерб определяется из важности где важность градируется от 1 до 5-10 и ущерб ей соответсвественно
     * */
@@ -50,7 +51,7 @@ public class Xiaofei_PTH_3M_Air_Detector {
         for (int i = 0; i < 1; i++)
         {
             System.out.println("Введите рейтинг" + " " + i + " " + "уязвимости ");
-            Xiaofei_PTH_3M_Air_Detector_vulnerabilities[i] = Double.parseDouble(reader.readLine());
+            Xiaofei_PTH_3M_Air_Detector_vulnerabilities[i] = Double.parseDouble(reader.readLine()) * availability * importance * k;
 
         }
 

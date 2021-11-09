@@ -13,6 +13,7 @@ public class Google_Home_Voice_Controller {
     public double importance;
     public double availability;
     public int damage;
+    double k = 0.181;
     /*
     ущерб определяется из важности где важность градируется от 1 до 5-10 и ущерб ей соответсвественно
     * */
@@ -51,7 +52,7 @@ public class Google_Home_Voice_Controller {
        for (int i = 0; i < 5; i++)
        {
            System.out.println("Введите рейтинг" + " " + i + " " + "уязвимости ");
-           Google_Home_Voice_Controller_vulnerabilities[i] = Double.parseDouble(reader.readLine());
+           Google_Home_Voice_Controller_vulnerabilities[i] = Double.parseDouble(reader.readLine()) * availability * importance * k;
 
        }
 

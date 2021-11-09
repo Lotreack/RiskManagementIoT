@@ -11,6 +11,7 @@ public class Aqara_Smart_Wireless_Switch {
     public double importance;
     public double availability;
     public int damage;
+    double k = 0.2219;
     /*
     ущерб определяется из важности где важность градируется от 1 до 5-10 и ущерб ей соответсвественно
     * */
@@ -49,7 +50,7 @@ public class Aqara_Smart_Wireless_Switch {
         for (int i = 0; i < 1; i++)
         {
             System.out.println("Введите рейтинг" + " " + i + " " + "уязвимости ");
-            Aqara_Smart_Wireless_Switch_vulnerabilities[i] = Double.parseDouble(reader.readLine());
+            Aqara_Smart_Wireless_Switch_vulnerabilities[i] = Double.parseDouble(reader.readLine()) * availability * importance * k;
 
         }
 

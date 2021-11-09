@@ -11,7 +11,8 @@ public class August_WiFi_Smart_Lock {
     public double[] August_WiFi_Smart_Loc_vulnerabilities = new double[1];
     public double importance;
     public double availability;
-    public int damage;
+    public double damage;
+    double k = 2100.01;
     /*
     ущерб определяется из важности где важность градируется от 1 до 5-10 и ущерб ей соответсвественно
     * */
@@ -39,7 +40,7 @@ public class August_WiFi_Smart_Lock {
         importance = Double.parseDouble(reader.readLine());
 
         System.out.println("Введите ущерб от взлома устройства");
-        damage = Integer.parseInt(reader.readLine());
+        damage = Integer.parseInt(reader.readLine()) * k;
 
 
 

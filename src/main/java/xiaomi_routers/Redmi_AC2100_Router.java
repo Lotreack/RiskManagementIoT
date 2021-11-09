@@ -12,6 +12,7 @@ public class Redmi_AC2100_Router {
     public double importance;
     public double availability;
     public int damage;
+    double k = 0.218;
     /*
     ущерб определяется из важности где важность градируется от 1 до 5-10 и ущерб ей соответсвественно
     * */
@@ -51,7 +52,7 @@ public class Redmi_AC2100_Router {
         for (int i = 0; i < 19; i++)
         {
             System.out.println("Введите рейтинг" + " " + i + " " + "уязвимости ");
-            Redmi_AC2100_Router_vulnerabilities[i] = Double.parseDouble(reader.readLine());
+            Redmi_AC2100_Router_vulnerabilities[i] = Double.parseDouble(reader.readLine()) * availability * importance * k;
 
         }
 

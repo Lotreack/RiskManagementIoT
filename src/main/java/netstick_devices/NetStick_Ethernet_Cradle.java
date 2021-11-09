@@ -8,10 +8,11 @@ public class NetStick_Ethernet_Cradle {
 
     String type = "Hub";
     String name = "NetStick_Ethernet_Cradle";
-    public double[] NetStick_Ethernet_Cradle_vulnerabilities = new double[0];
+    public double[] NetStick_Ethernet_Cradle_vulnerabilities = new double[10];
     public double importance;
     public double availability;
     public int damage;
+    double k = 170000;
     /*
     ущерб определяется из важности где важность градируется от 1 до 5-10 и ущерб ей соответсвественно
     * */
@@ -50,7 +51,7 @@ public class NetStick_Ethernet_Cradle {
         for (int i = 0; i < 1; i++)
         {
             System.out.println("Введите рейтинг" + " " + i + " " + "уязвимости ");
-            NetStick_Ethernet_Cradle_vulnerabilities[i] = Double.parseDouble(reader.readLine());
+            NetStick_Ethernet_Cradle_vulnerabilities[i] = Double.parseDouble(reader.readLine()) * availability * importance * k;
 
         }
 

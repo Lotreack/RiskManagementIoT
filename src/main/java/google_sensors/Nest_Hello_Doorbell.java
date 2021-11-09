@@ -12,6 +12,7 @@ public class Nest_Hello_Doorbell {
     public double importance;
     public double availability;
     public int damage;
+    double k = 18.181;
     /*
     ущерб определяется из важности где важность градируется от 1 до 5-10 и ущерб ей соответсвественно
     * */
@@ -47,7 +48,7 @@ public class Nest_Hello_Doorbell {
         for (int i = 0; i < 10; i++)
         {
             System.out.println("Введите рейтинг" + " " + i + " " + "уязвимости ");
-            Nest_Hello_Doorbell_vulnerabilities[i] = Double.parseDouble(reader.readLine());
+            Nest_Hello_Doorbell_vulnerabilities[i] = Double.parseDouble(reader.readLine()) * availability * importance * k;
 
         }
 

@@ -11,7 +11,8 @@ public class Amazon_Echo_Show_8 {
     public double[] Amazon_Echo_Show_8_vulnerabilities = new double[1];
     public double importance;
     public double availability;
-    public int damage;
+    public double damage;
+    double k = 2100.01;
     /*
     ущерб определяется из важности где важность градируется от 1 до 5-10 и ущерб ей соответсвественно
     * */
@@ -39,14 +40,14 @@ public class Amazon_Echo_Show_8 {
         importance = Double.parseDouble(reader.readLine());
 
         System.out.println("Введите ущерб от взлома устройства");
-        damage = Integer.parseInt(reader.readLine());
+        damage = Integer.parseInt(reader.readLine()) * k;
 
 
 
         for (int i = 0; i < 1; i++)
         {
             System.out.println("Введите рейтинг" + " " + i + " " + "уязвимости ");
-            Amazon_Echo_Show_8_vulnerabilities[i] = Double.parseDouble(reader.readLine());
+            Amazon_Echo_Show_8_vulnerabilities[i] = Double.parseDouble(reader.readLine()) * availability * importance;
 
         }
 

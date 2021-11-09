@@ -12,6 +12,7 @@ public class Google_Nest_Mini {
     public double importance;
     public double availability;
     public int damage;
+    double k = 0.174;
     /*
     ущерб определяется из важности где важность градируется от 1 до 5-10 и ущерб ей соответсвественно
     * */
@@ -47,7 +48,7 @@ public class Google_Nest_Mini {
         for (int i = 0; i < 48; i++)
         {
             System.out.println("Введите рейтинг" + " " + i + " " + "уязвимости ");
-            Google_Nest_Mini_vulnerabilities[i] = Double.parseDouble(reader.readLine());
+            Google_Nest_Mini_vulnerabilities[i] = Double.parseDouble(reader.readLine()) * availability * importance * k;
 
         }
 

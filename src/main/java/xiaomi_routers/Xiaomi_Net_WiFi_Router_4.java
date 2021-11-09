@@ -12,6 +12,7 @@ public class Xiaomi_Net_WiFi_Router_4 {
     public double importance;
     public double availability;
     public int damage;
+    double k = 0.218;
     /*
     ущерб определяется из важности где важность градируется от 1 до 5-10 и ущерб ей соответсвественно
     * */
@@ -51,7 +52,7 @@ public class Xiaomi_Net_WiFi_Router_4 {
         for (int i = 0; i < 19; i++)
         {
             System.out.println("Введите рейтинг" + " " + i + " " + "уязвимости ");
-            Google_Home_Voice_Controller_vulnerabilities[i] = Double.parseDouble(reader.readLine());
+            Google_Home_Voice_Controller_vulnerabilities[i] = Double.parseDouble(reader.readLine()) * availability * importance * k;
 
         }
 

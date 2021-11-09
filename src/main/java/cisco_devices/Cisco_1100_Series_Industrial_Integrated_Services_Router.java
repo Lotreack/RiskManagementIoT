@@ -11,7 +11,9 @@ public class Cisco_1100_Series_Industrial_Integrated_Services_Router {
     public double[]Cisco_1100_Series_Industrial_Integrated_Services_Router_vulnerabilities = new double[1];
     public double importance;
     public double availability;
-    public int damage;
+    public double damage;
+    double k = 1560.789;
+
     /*
     ущерб определяется из важности где важность градируется от 1 до 5-10 и ущерб ей соответсвественно
     * */
@@ -39,14 +41,14 @@ public class Cisco_1100_Series_Industrial_Integrated_Services_Router {
         importance = Double.parseDouble(reader.readLine());
 
         System.out.println("Введите ущерб от взлома устройства");
-        damage = Integer.parseInt(reader.readLine());
+        damage = Integer.parseInt(reader.readLine()) * k;
 
 
 
         for (int i = 0; i < 1; i++)
         {
             System.out.println("Введите рейтинг" + " " + i + " " + "уязвимости ");
-            Cisco_1100_Series_Industrial_Integrated_Services_Router_vulnerabilities[i] = Double.parseDouble(reader.readLine());
+            Cisco_1100_Series_Industrial_Integrated_Services_Router_vulnerabilities[i] = Double.parseDouble(reader.readLine()) * availability * importance * k;
 
         }
 

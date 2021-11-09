@@ -11,6 +11,7 @@ public class Mi_Home_Mijia_ClearGrass_Air_Detector_CGS1 {
     public double importance;
     public double availability;
     public int damage;
+    double k = 0.1928;
     /*
     ущерб определяется из важности где важность градируется от 1 до 5-10 и ущерб ей соответсвественно
     * */
@@ -49,7 +50,7 @@ public class Mi_Home_Mijia_ClearGrass_Air_Detector_CGS1 {
         for (int i = 0; i < 127; i++)
         {
             System.out.println("Введите рейтинг" + " " + i + " " + "уязвимости ");
-            Mi_Home_Mijia_ClearGrass_Air_Detector_CGS1_vulnerabilities[i] = Double.parseDouble(reader.readLine());
+            Mi_Home_Mijia_ClearGrass_Air_Detector_CGS1_vulnerabilities[i] = Double.parseDouble(reader.readLine()) * availability * importance * k;
 
         }
 

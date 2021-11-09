@@ -1,6 +1,7 @@
 package amazon_systems;
 
 import java.io.*;
+import java.math.BigInteger;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -11,7 +12,10 @@ public class Amazon_Echo_Flex {
     public double[] Amazon_Echo_Flex_vulnerabilities = new double[2];
     public double importance;
     public double availability;
-    public int damage;
+    public double damage;
+
+    double k = 20.01;
+
     /*
     ущерб определяется из важности где важность градируется от 1 до 5-10 и ущерб ей соответсвественно
     * */
@@ -39,16 +43,18 @@ public class Amazon_Echo_Flex {
         importance = Double.parseDouble(reader.readLine());
 
         System.out.println("Введите ущерб от взлома устройства");
-        damage = Integer.parseInt(reader.readLine());
-
+        damage = Integer.parseInt(reader.readLine())*  k;
 
 
         for (int i = 0; i < 2; i++)
         {
             System.out.println("Введите рейтинг" + " " + i + " " + "уязвимости ");
-            Amazon_Echo_Flex_vulnerabilities[i] = Double.parseDouble(reader.readLine());
+            Amazon_Echo_Flex_vulnerabilities[i] = Double.parseDouble(reader.readLine()) * availability * importance;
 
         }
 
     }
+
+
+
 }

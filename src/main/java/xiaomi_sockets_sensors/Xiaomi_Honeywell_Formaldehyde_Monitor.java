@@ -11,6 +11,7 @@ public class Xiaomi_Honeywell_Formaldehyde_Monitor {
     public double importance;
     public double availability;
     public int damage;
+    double k = 0.2231;
     /*
     ущерб определяется из важности где важность градируется от 1 до 5-10 и ущерб ей соответсвественно
     * */
@@ -49,7 +50,7 @@ public class Xiaomi_Honeywell_Formaldehyde_Monitor {
         for (int i = 0; i < 38; i++)
         {
             System.out.println("Введите рейтинг" + " " + i + " " + "уязвимости ");
-            Xiaomi_Honeywell_Formaldehyde_Monitor_vulnerabilities[i] = Double.parseDouble(reader.readLine());
+            Xiaomi_Honeywell_Formaldehyde_Monitor_vulnerabilities[i] = Double.parseDouble(reader.readLine()) * availability * importance * k;
 
         }
 
